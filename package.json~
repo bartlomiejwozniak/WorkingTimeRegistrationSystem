@@ -1,0 +1,6 @@
+{
+	"name": "nodebot-sample",
+	"dependencies": {
+		"express": "^4.11.2"
+	}
+}

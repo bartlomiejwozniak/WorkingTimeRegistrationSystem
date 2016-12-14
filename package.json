@@ -1,0 +1,8 @@
+{
+  "name": "nodebot-sample",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.11.2",
+    "socket.io": "^1.3.3"
+  }
+}

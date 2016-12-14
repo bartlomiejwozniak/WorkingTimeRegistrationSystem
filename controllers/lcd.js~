@@ -1,0 +1,9 @@
+var Lcd = require('../lcd/lcd');
+
+exports.display = function (req, res) {
+	console.log(req.body);
+	Lcd.display(req.body.user_name);
+	res.json('hahah');
+}
+
+
