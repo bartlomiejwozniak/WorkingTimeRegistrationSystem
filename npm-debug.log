@@ -1,0 +1,78 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'node-fluent-ffmpeg',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 warn package.json nodebot-sample@ No description
+5 warn package.json nodebot-sample@ No repository field.
+6 warn package.json nodebot-sample@ No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'node-fluent-ffmpeg', null ]
+9 verbose cache add name=undefined spec="node-fluent-ffmpeg" args=["node-fluent-ffmpeg",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'node-fluent-ffmpeg',
+10 verbose parsed url   path: 'node-fluent-ffmpeg',
+10 verbose parsed url   href: 'node-fluent-ffmpeg' }
+11 silly lockFile 5a2dbacf-node-fluent-ffmpeg node-fluent-ffmpeg
+12 verbose lock node-fluent-ffmpeg /home/root/.npm/5a2dbacf-node-fluent-ffmpeg.lock
+13 silly lockFile 5a2dbacf-node-fluent-ffmpeg node-fluent-ffmpeg
+14 silly lockFile 5a2dbacf-node-fluent-ffmpeg node-fluent-ffmpeg
+15 verbose addNamed [ 'node-fluent-ffmpeg', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 3b8051dc-node-fluent-ffmpeg node-fluent-ffmpeg@
+18 verbose lock node-fluent-ffmpeg@ /home/root/.npm/3b8051dc-node-fluent-ffmpeg.lock
+19 silly addNameRange { name: 'node-fluent-ffmpeg', range: '*', hasData: false }
+20 verbose request where is /node-fluent-ffmpeg
+21 verbose request registry https://registry.npmjs.org/
+22 verbose request id b100049e3559ad4d
+23 verbose url raw /node-fluent-ffmpeg
+24 verbose url resolving [ 'https://registry.npmjs.org/', './node-fluent-ffmpeg' ]
+25 verbose url resolved https://registry.npmjs.org/node-fluent-ffmpeg
+26 verbose request where is https://registry.npmjs.org/node-fluent-ffmpeg
+27 info trying registry request attempt 1 at 15:35:43
+28 http GET https://registry.npmjs.org/node-fluent-ffmpeg
+29 http 404 https://registry.npmjs.org/node-fluent-ffmpeg
+30 silly registry.get cb [ 404,
+30 silly registry.get   { 'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '2',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     date: 'Wed, 14 Dec 2016 15:35:44 GMT',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     connection: 'keep-alive',
+30 silly registry.get     'x-served-by': 'cache-fra1243-FRA',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1481729743.849199,VS0,VE692',
+30 silly registry.get     vary: 'Accept-Encoding' } ]
+31 silly lockFile 3b8051dc-node-fluent-ffmpeg node-fluent-ffmpeg@
+32 silly lockFile 3b8051dc-node-fluent-ffmpeg node-fluent-ffmpeg@
+33 error 404 Not Found
+33 error 404
+33 error 404 'node-fluent-ffmpeg' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'nodebot-sample'
+33 error 404
+33 error 404 Maybe try 'npm search fluent ffmpeg'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Linux 3.10.17-poky-edison+
+35 error command "node" "/usr/bin/npm" "install" "node-fluent-ffmpeg" "--save"
+36 error cwd /project
+37 error node -v v0.10.38
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]
