@@ -5,6 +5,7 @@
     "express": "^4.11.2",
     "memory-stream": "0.0.3",
     "memory-streams": "^0.1.0",
-    "node-mailer": "^0.1.1"
+    "node-mailer": "^0.1.1",
+    "unirest": "^0.5.1"
   }
 }

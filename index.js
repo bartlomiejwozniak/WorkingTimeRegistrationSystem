@@ -6,9 +6,9 @@ var bodyParser = require('body-parser');
 
 var lcdController = require('./controllers/lcd');
 var cameraController = require('./controllers/camera');
-
-app.use(bodyParser.json({limit: '2mb'}));
-app.use(bodyParser.urlencoded({limit: '2mb', extended: true}));
+var lambdaController = require('./controllers/lambda');
+app.use(bodyParser.json({limit: '10mb'}));
+app.use(bodyParser.urlencoded({limit: '10mb', extended: true}));
 
 var router = express.Router();
 
@@ -20,6 +20,9 @@ router.route('/camera/take')
 
 router.route('/camera/delete')
 	.post(cameraController.delete);
-    
+
+router.route('/lambda/recognize')
+	.post(lambdaController.recognize);
+
 app.use('/api', router);
 app.listen(8081);
