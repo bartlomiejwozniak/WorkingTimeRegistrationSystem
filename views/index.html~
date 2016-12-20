@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/views/connect.js"></script>
+	</head>
+	<body> 
+		<div id="stream-container"> 
+			<canvas id="videostream" style="border:solid;width:1280; height:720;"></canvas> 
+		</div> 
+	</body> 
+</html>

@@ -25,19 +25,15 @@ exports.delete = function (fileName) {
 	//});
 }
 
-exports.stream = function (io){
-	console.log('stream');
-	var ffmpeg2 = require('child_process').spawn('/WorkingTimeRegistrationSystem/camera/ffmpeg-3.2-32bit-static/ffmpeg', [  "-re","-y", "-i", "/dev/video0", "-f", "mjpeg", "pipe:1" ]);
-
-	//ffmpeg2.stderr.on('data', function (data) {
-	//			  console.log('stderr: ' + data.toString());
-	//});
-	ffmpeg2.stdout.on('data', function (data) {
-		//console.log("data: "+data);
+exports.stream = function (req, res, io){
+	var ffmpeg2 = require('child_process').spawn('/WorkingTimeRegistrationSystem/camera/ffmpeg-3.2-32bit-static/ffmpeg', [  "-i", "/dev/video0", "-f", "mjpeg", "udp://127.0.0.1:1234" ]);
+	ffmpeg2.stderr.on('data', function (data) {
+//		  console.log('stderr: ' + data.toString());
+//	});
+//	ffmpeg2.stdout.on('data', function (data) {
+//		console.log(data);
 		var frame = new Buffer(data).toString('base64');
-		//console.log('frame');
 		io.sockets.emit('canvas',frame);
-		//io.sockets.emit('news', frame);
 	});
 }
  

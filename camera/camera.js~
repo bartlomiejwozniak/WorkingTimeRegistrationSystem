@@ -25,8 +25,20 @@ exports.delete = function (fileName) {
 	//});
 }
 
-exports.stream = function (req, res, callback){
-	
+exports.stream = function (io){
+	console.log('stream);
+	var ffmpeg2 = require('child_process').spawn('/WorkingTimeRegistrationSystem/camera/ffmpeg-3.2-32bit-static/ffmpeg', [  "-re","-y", "-i", "/dev/video0", "-f", "mjpeg", "pipe:1" ]);
+
+	//ffmpeg2.stderr.on('data', function (data) {
+	//			  console.log('stderr: ' + data.toString());
+	//});
+	ffmpeg2.stdout.on('data', function (data) {
+		//console.log("data: "+data);
+		var frame = new Buffer(data).toString('base64');
+		//console.log('frame');
+		io.sockets.emit('canvas',frame);
+		//io.sockets.emit('news', frame);
+	});
 }
  
 exports.take= function (req, res, callback) {
